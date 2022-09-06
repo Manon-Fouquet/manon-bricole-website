@@ -222,3 +222,9 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
+
+.container {
+  margin: auto;
+  max-width: 500px;
+  font-family: sans-serif;
+}
