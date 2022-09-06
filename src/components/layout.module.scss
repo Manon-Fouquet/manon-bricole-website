@@ -1,0 +1,52 @@
+
+.container {
+  margin: 0px;
+  padding:0px;
+  display:grid;
+  width:100%; 
+  max-width: 1600px;
+  font-family: sans-serif;
+  background-color: antiquewhite;
+  grid-template-areas: 
+      "hd"
+      "title"
+      "content"
+      ;
+  grid-template-columns: 1fr;
+}
+
+.header {
+  grid-area: hd;
+}
+
+.heading {
+  grid-area:title;
+  color: rebeccapurple;
+  align-self: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.nav-link-item {
+  padding-right: 2rem;
+}
+.nav-link-text {
+  color: black;
+}
+
+.site-title {
+  font-size: 3rem;
+  color: gray;
+  font-weight: 700;
+  margin: 3rem 0;
+}
+
+.content{
+  background: white;
+  grid-area: content;
+}
+
+ 

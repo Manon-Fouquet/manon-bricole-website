@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: "My First Gatsby Site",
-    author:"Manon"
+    title: "Manon bricole",
+    author:"Manon Fouquet"
   },
   plugins: [
     "gatsby-plugin-image",
-    "gatsby-plugin-sharp"
+    "gatsby-plugin-sharp",
+    `gatsby-plugin-sass`
   ],
 };

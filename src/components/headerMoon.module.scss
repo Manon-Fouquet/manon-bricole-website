@@ -1,0 +1,45 @@
+$diameter : 150px;
+$crescent:0.25;
+$top:80px;
+$borderWidth:5px;
+
+.circle-header{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height : $diameter;
+    top:$top;
+}
+
+.circle-frame{
+    position: relative;
+    border-radius: 50%;
+    background-color:pink;
+    border-color: black;  
+    height: $diameter;
+    width: $diameter;
+  }
+
+.circle-moon{
+    position: absolute;
+    top:0px; 
+    border-radius: 50%;
+    background-color:white;
+    left:($crescent*$diameter - $borderWidth)/2; 
+    border-color: black;
+    width:$diameter*(1-$crescent)+2*$borderWidth; 
+    height:$diameter*(1-$crescent)+2*$borderWidth;
+}
+
+
+.circle-pic{
+    position: relative;
+    border-radius: 50%;
+    top: $borderWidth/2;
+    left:$borderWidth;
+    width: $diameter*(1-$crescent); 
+    height: $diameter*(1-$crescent); 
+    background-image: url("../images/gatsby-icon.png");
+    background-size: contain;
+}
