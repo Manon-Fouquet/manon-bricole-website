@@ -1,15 +1,16 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 import HeaderMoon from './headerMoon'
 import {
   container,
   header,
-  heading,
+  navMenu,
   navLinks,
   navLinkItem,
   navLinkText,
+  content
 } from './layout.module.scss'
+
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
   query {
@@ -21,13 +22,8 @@ const Layout = ({ pageTitle, children }) => {
   }
 `)
   return (
-
-      
     <div className={container}>
-      
-        <div className={header}>
-          <StaticImage picture="../images/header.JPG"></StaticImage>
-            <nav>
+        <nav className = {navMenu}>
               <ul className={navLinks}>
                 <li className={navLinkItem}>
                   <Link to="/" className={navLinkText}>
@@ -40,15 +36,15 @@ const Layout = ({ pageTitle, children }) => {
                   </Link>
                 </li>
               </ul>
-          </nav>
-          <HeaderMoon picture = "../images/gatsby-icon.png"/>
+        </nav>
+
+        <div className={header}>
+          <HeaderMoon picture = "../images/gatsby-icon.png" />
         </div>
-        <title>{data.site.siteMetadata.title}</title>
-       
-        <main>  
-          <h1 className={heading}>{pageTitle}</h1>
-          {children}
-      </main>
+
+        <div className={content}>
+          Contenu principal
+        </div>
     </div>
   )
 }
