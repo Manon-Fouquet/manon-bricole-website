@@ -15,7 +15,7 @@ $top:30px;
 .circle-frame{
     position: relative;
     border-radius: 50%;
-    background-color:burlywood;
+    background-color:rgb(3, 68, 94);
     height: $diameter;
     width: $diameter;
   }
@@ -39,6 +39,5 @@ $top:30px;
     left:$borderWidth;
     width: $diameter*(1-$crescent); 
     height: $diameter*(1-$crescent); 
-    background-image: url("../images/gatsby-icon.png");
     background-size: contain;
 }

@@ -6,12 +6,15 @@ import {
     circleMoon
 } from './headerMoon.module.scss'
 
-const HeaderMoon = (picture) => {
+
+import HeaderCircle from "../images/snail.jpg"
+
+const HeaderMoon = () => {
   return (
       <div className = {circleHeader}>
           <div className={circleFrame}>
-              <div className = {circleMoon} style={{backgroundImage: "url(" + picture + ")"}}>
-                <div className={circlePic}></div>
+              <div className = {circleMoon} >
+                <div className={circlePic} style={{backgroundImage: `url(${HeaderCircle})`}}></div>
               </div>
           </div>
       </div>

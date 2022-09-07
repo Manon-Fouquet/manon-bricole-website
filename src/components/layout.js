@@ -1,10 +1,13 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import HeaderMoon from './headerMoon'
+import HeaderImage from "../images/header.jpg"
 import {
   container,
+  heading,
   header,
   navMenu,
+  topRow,
   navLinks,
   navLinkItem,
   navLinkText,
@@ -23,7 +26,11 @@ const Layout = ({ pageTitle, children }) => {
 `)
   return (
     <div className={container}>
-        <nav className = {navMenu}>
+        <div className = {topRow}>
+          
+          <div className = {heading}> Manon FOUQUET</div>
+          
+          <nav className = {navMenu}>
               <ul className={navLinks}>
                 <li className={navLinkItem}>
                   <Link to="/" className={navLinkText}>
@@ -36,12 +43,12 @@ const Layout = ({ pageTitle, children }) => {
                   </Link>
                 </li>
               </ul>
-        </nav>
-
-        <div className={header}>
-          <HeaderMoon picture = "../images/gatsby-icon.png" />
+          </nav>
         </div>
 
+        <div className={header} style={{backgroundImage: `url(${HeaderImage})`}}>
+          <HeaderMoon/>
+        </div>
         <div className={content}>
           Contenu principal
         </div>
