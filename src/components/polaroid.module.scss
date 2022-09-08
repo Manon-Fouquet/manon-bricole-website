@@ -1,0 +1,19 @@
+.polaroid-frame{
+  display: grid;
+  grid-template-areas:
+  "pic"
+  "date"
+  "descr" ;
+}
+
+.polaroid-pic{
+  grid-area: pic;
+}
+
+.polaroid-date{
+  grid-area: date;
+}
+
+.polaroid-descr{
+  grid-area: descr;
+}
