@@ -25,7 +25,7 @@ $top:30px;
     top:0px; 
     border-radius: 50%;
     background-color:white;
-    left:($crescent*$diameter - $borderWidth)/2; 
+    left:calc(($crescent*$diameter - $borderWidth)/2); 
     border-color: black;
     width:$diameter*(1-$crescent)+2*$borderWidth; 
     height:$diameter*(1-$crescent)+2*$borderWidth;
@@ -35,7 +35,7 @@ $top:30px;
 .circle-pic{
     position: relative;
     border-radius: 50%;
-    top: $borderWidth/2;
+    top: 0.5*$borderWidth;
     left:$borderWidth;
     width: $diameter*(1-$crescent); 
     height: $diameter*(1-$crescent); 

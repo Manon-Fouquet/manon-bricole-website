@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import HeaderMoon from './headerMoon'
 import HeaderImage from "../images/header.jpg"
+
 import {
   container,
   heading,
@@ -48,9 +49,11 @@ const Layout = ({ pageTitle, children }) => {
 
         <div className={header} style={{backgroundImage: `url(${HeaderImage})`}}>
           <HeaderMoon/>
-        </div>
+        </div >
         <div className={content}>
-          Contenu principal
+          <main>
+              {children}
+          </main>
         </div>
     </div>
   )
