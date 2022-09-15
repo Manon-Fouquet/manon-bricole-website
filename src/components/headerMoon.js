@@ -7,7 +7,7 @@ import {
 } from './headerMoon.module.scss'
 
 
-import HeaderCircle from "../images/Cartoonify.png"
+import HeaderCircle from "../images/Cartoonify.svg"
 
 const HeaderMoon = () => {
   return (
