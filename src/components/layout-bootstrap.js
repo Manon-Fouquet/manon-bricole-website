@@ -4,6 +4,8 @@ import HeaderMoon from './headerMoon'
 import { Container,Navbar,NavDropdown ,Nav, Row} from 'react-bootstrap'
 import CV_EN from '../data/202209_CV_FOUQUET_Manon_EN.pdf'
 import CV_FR from '../data/202209_CV_FOUQUET_Manon_FR.pdf'
+import downloadPic from '../images/icons/download.svg'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Layout = ({ pageTitle, children }) => {
   
@@ -30,9 +32,9 @@ const Layout = ({ pageTitle, children }) => {
                 <Nav.Link href="/perso/">DIY</Nav.Link> 
                 <Nav.Link href="/contact/">Contact</Nav.Link>
                   <NavDropdown title="CV" id="basic-nav-dropdown">
-                    <NavDropdown.Item href={CV_EN}>en</NavDropdown.Item>
+                    <NavDropdown.Item href={CV_EN}>english</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href={CV_FR}>fr</NavDropdown.Item>
+                    <NavDropdown.Item href={CV_FR}>french</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
               </Navbar.Collapse>

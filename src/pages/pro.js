@@ -3,7 +3,6 @@ import Layout from '../components/layout-bootstrap'
 import Seo from '../components/seo'
 import { Card, Button ,Row,Col,Container} from 'react-bootstrap'
 
-import TestPic1 from '../images/lutherie_5.jpg'
 import TestPic2 from '../images/seattle.jpg'
 import { StaticQuery, graphql } from "gatsby"
 
@@ -42,10 +41,10 @@ const Pro = ({data}) => {
 
 
 export const query = graphql`
-query {
-  allFile(filter: {sourceInstanceName: {eq: "work"}}) {
+query MyQuery{
+  allMdx {
     nodes {
-      name
+      id
     }
   }
 }
