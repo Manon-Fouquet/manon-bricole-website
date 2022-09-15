@@ -7,7 +7,7 @@ import {
 } from './headerMoon.module.scss'
 
 
-import HeaderCircle from "../images/snail.jpg"
+import HeaderCircle from "../images/Cartoonify.png"
 
 const HeaderMoon = () => {
   return (
