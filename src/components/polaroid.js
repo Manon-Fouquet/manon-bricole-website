@@ -1,50 +1,52 @@
 import * as React from 'react'
 import styled from "styled-components"
 const PolaroidFrame = styled.div
+
 `
   display: grid;
   grid-template-areas:
   "pic"
   "date"
   "descr" ;
-  grid-template-columns: minmax(250px ,10%);
-  grid-template-rows:60% 10% 30%;
-  height:400px;
+  grid-template-rows:minmax(300px,1vh) minmax(50px,1vh) 1fr;
+  grid-template-columns:100%;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-  background-color: rgb(255, 226, 203); 
+  background-color: white; 
   border-radius: 5px;
   justify-content:center;
-  margin:10px;
+  padding:10px;
+  margin:20px;
+  width:100%;
 `
-/* 
-  background-size:contain;
-  background-repeat: no-repeat;
-  */
 
 const PolaroidPic = styled.div
 `
   grid-area: pic;
-  margin:12px;
   background-size:contain;
   background-repeat: no-repeat;
   background-color:rgba(255, 255, 255, 0.3);
   box-sizing:content-box;
-  background-position: center;
-  
+  background-position: bottom;
+  width:100%;  
+  border: 1px solid lightgray;
 `
 //border: 1px solid rgba(0, 0, 0, 0.5);
 
 const PolaroidDate = styled.div
 `
   grid-area: date;
-  height: 20%;
   text-align:center;
 `
+
+
+/*
+border:green;
+border-style:dashed;
+*/
 
 const PolaroidDescr= styled.div
 `
   grid-area: descr;
-  height: 40%;
 `
 const Polaroid =({data})=>{
   return (
