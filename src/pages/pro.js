@@ -5,8 +5,9 @@ import { Card, Button ,Row,Col,Container} from 'react-bootstrap'
 
 import TestPic2 from '../images/seattle.jpg'
 import { StaticQuery, graphql } from "gatsby"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
-
+// 
 const Pro = ({data}) => {
 
   return (
@@ -14,23 +15,29 @@ const Pro = ({data}) => {
         
         <h3>A collection of work related articles</h3>
         <Container fluid="md"> 
-        <Row className='mt-4' fluid="md" >
+        <Row className='mt-4'  >
           {
-            data.allFile.nodes.map(node => (
-              <Col>
+            data.allMarkdownRemark.nodes.map(node => 
+              {
+                //const image = getImage(node.frontmatter.picture?node.frontmatter.picture:'../images/seattle.jpg')
+              
+                const picPath = node.frontmatter.picture
+                return  <Col className='col-12 col-sm-12 col-md-6 col-lg-4'>
                 <Card style={{marginBottom:"20px"}} >
-                <Card.Img variant="top" src={TestPic2}/> 
+                  
+                <GatsbyImage src ="../images/seattle.jpg"></GatsbyImage>
                 <Card.Body>
-                    <Card.Title>{node.name}</Card.Title>
+                    <Card.Title>{node.frontmatter.title}</Card.Title>
                     <Card.Text>
-                    short description
+                    {node.frontmatter.summary}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button size='sm' variant="primary" href={node.frontmatter.link} target="_blank">Link</Button>
                   </Card.Body>
                 </Card>
-            </Col> 
-
-            ))
+              </Col> 
+              }
+  
+            )
           }
       </Row>
       
@@ -42,12 +49,20 @@ const Pro = ({data}) => {
 
 export const query = graphql`
 query MyQuery{
-  allMdx {
-    nodes {
-      id
+    allMarkdownRemark {
+      nodes {
+        html
+        frontmatter {
+          date(formatString: "MMMM YYYY")
+          link
+          summary
+          title
+          slug
+          picture 
+        }
+      }
     }
   }
-}
 `
 export const Head = () => <Seo title="Professional portfolio" />
 export default Pro

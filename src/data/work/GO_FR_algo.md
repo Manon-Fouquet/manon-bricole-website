@@ -3,8 +3,6 @@ title: "Market clearing algorithm for the French Guarantees of Origin (GO) marke
 date: "2022-09-15"
 slug: "GO_FR"
 summary: "Implementation of a sequential optimization algorithm for optimal GO allocation using Knitro"
-link:"https://www.powernext.com/fr/press-release/lancement-reussi-des-encheres-mensuelles-pour-les-garanties-dorigine"
+link: "https://www.powernext.com/fr/press-release/lancement-reussi-des-encheres-mensuelles-pour-les-garanties-dorigine"
+picture: "../images/seattle.jpg"
 ---
-
-
-

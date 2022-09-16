@@ -1,8 +1,10 @@
 ---
-title: "Auction clearing algorithm for the Belgian CRM"
-date: "2022-09-15"
-slug: "CRM"
+title:  "Auction clearing algorithm for the Belgian CRM"
+date:   "2022-09-15"
+slug:   "CRM"
 summary: "Expertise on market design, later  implementation of a sequential optimization algorithm using Xpress"
+link:   "empty"
+picture: "../images/seattle.jpg"
 ---
 
 On October 2021 was the first run of the newly designed Capacity Remuneration Mechanism (CRM) in Belgium.

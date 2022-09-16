@@ -1,0 +1,8 @@
+---
+title:  "Optimization of a CHP plant"
+date:   "2022-09-15"
+slug:   "CHP"
+summary: "development of a library for modelling a Combined Heat and Power plant using MILP framework, and modelling of the power plant (physical model and electricity markets) in order to improve the bidding strategy"
+link:   "https://twitter.com/_artelys/status/1227890556120031238"
+picture: "../images/chp.jpg"
+---
