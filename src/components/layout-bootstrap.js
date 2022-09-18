@@ -1,11 +1,9 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import HeaderMoon from './headerMoon'
 import { Container,Navbar,NavDropdown ,Nav, Row} from 'react-bootstrap'
 import CV_EN from '../data/202209_CV_FOUQUET_Manon_EN.pdf'
 import CV_FR from '../data/202209_CV_FOUQUET_Manon_FR.pdf'
-import downloadPic from '../images/icons/download.svg'
-import { StaticImage } from 'gatsby-plugin-image'
 
 const Layout = ({ pageTitle, children }) => {
   
