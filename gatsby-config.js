@@ -13,12 +13,14 @@ module.exports = {
       options: {
         name: `work`,
         path: `${__dirname}/src/data/work`,
+        name:'pro_articles'
       }
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/data/work/images`,
+        name:'pro_img'
       }
     },
 
