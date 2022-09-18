@@ -6,4 +6,12 @@ summary: "I defended my PhD thesis in 2016, in cooperation between EDF and Centr
 link: "https://hal.archives-ouvertes.fr/tel-01368526/"
 picture: "./images/modelica.png"
 technos: "python MILP physical model"
+keywords: 
+    - "physical models"
+    - "scientific publication"
+    - "NLP"
+    - "dynamic optimization"
+    - "MPC"
+    - "python"
+    - "MATLAB"
 ---

@@ -1,10 +1,20 @@
 ---
 title:  "Auction clearing algorithm for the Belgian CRM"
-date:   "2022-09-15"
+date:   "2021-10-01"
 slug:   "CRM"
-summary: "To support nuclear phase out in Belgium, a Capacity Remuneration Mechnasim was set-up, in order to foster investments in new capacities. I provided expertise on the market design, and was later in charge of supervising the implementation of the auction clearing algorithm (sequential optimization algorithm using Xpress)"
+summary: "To support nuclear phase out in Belgium, a Capacity Remuneration Mechnasim was set-up, in order to foster investments in new capacities. I provided expertise on the market design, and was later in charge of supervising the implementation of the auction clearing algorithm (sequential optimization algorithm using Xpress), including data format specification, coordination of the code development, weekly meetings coordination and validation of the deliverables."
 link:   "empty"
 picture: "./images/nuclear.jpg"
+keywords: 
+    - "project management"
+    - "markets"
+    - "optimization"
+    - "data structure"
+    - "MILP"
+    - "Knitro"
+    - "Python"
+    - "Allure"
+    - "markets"
 ---
 
 On October 2021 was the first run of the newly designed Capacity Remuneration Mechanism (CRM) in Belgium.
