@@ -2,12 +2,13 @@ import * as React from 'react'
 import Layout from '../components/layout-bootstrap'
 import Seo from '../components/seo'
 import { Card, Button ,Row,Col,Container} from 'react-bootstrap'
+import Img from 'gatsby-image'
 
-import TestPic2 from '../images/seattle.jpg'
-import { StaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 
-// 
+// Could not manage to use gatsby-plugin-image to retrieve img from mdx path
+
+
 const Pro = ({data}) => {
 
   return (
@@ -19,13 +20,10 @@ const Pro = ({data}) => {
           {
             data.allMarkdownRemark.nodes.map(node => 
               {
-                //const image = getImage(node.frontmatter.picture?node.frontmatter.picture:'../images/seattle.jpg')
-              
-                const picPath = node.frontmatter.picture
+                
                 return  <Col className='col-12 col-sm-12 col-md-6 col-lg-4'>
+                <Card.Img/><Img fluid ={node.frontmatter.picture.childImageSharp.fluid}/>
                 <Card style={{marginBottom:"20px"}} >
-                  
-                <GatsbyImage src ="../images/seattle.jpg"></GatsbyImage>
                 <Card.Body>
                     <Card.Title>{node.frontmatter.title}</Card.Title>
                     <Card.Text>
@@ -48,21 +46,26 @@ const Pro = ({data}) => {
 
 
 export const query = graphql`
-query MyQuery{
-    allMarkdownRemark {
-      nodes {
-        html
-        frontmatter {
-          date(formatString: "MMMM YYYY")
-          link
-          summary
-          title
-          slug
-          picture 
+query MyQuery {
+  allMarkdownRemark {
+    nodes {
+      html
+      frontmatter {
+        summary
+        date
+        link
+        picture {
+          childImageSharp {
+            fluid{
+              ...GatsbyImageSharpFluid
+              aspectRatio
+            }
+          }
         }
       }
     }
   }
+}
 `
 export const Head = () => <Seo title="Professional portfolio" />
 export default Pro
