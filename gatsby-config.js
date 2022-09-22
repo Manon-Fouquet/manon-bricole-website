@@ -1,11 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: "Manon Fouquet's blog",
+    title: "Manon Fouquet",
     author:"Manon Fouquet"
   },
   plugins: [
     "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
+    {
+      resolve : "gatsby-plugin-sharp",
+      options:{
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`
+        }
+      }
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     {
