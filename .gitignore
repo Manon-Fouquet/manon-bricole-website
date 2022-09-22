@@ -67,4 +67,8 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-src/data/DIY/yurt/yurt.zip
+
+
+# Other files
+*.zip
+log.txt
