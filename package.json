@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "manon-bricole",
+  "private": false,
+  "description": "Manon's personal home page",
+  "version": "0.0.0",
+  "author": "Manon FOUQUET <ms.manonfouquet@gmail.com>",
   "dependencies": {
     "@mdx-js/react": "^2.1.3",
     "@popperjs/core": "^2.6.0",
@@ -49,7 +49,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Manon-Fouquet/manon-bricole-website"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
