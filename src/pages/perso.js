@@ -1,67 +1,54 @@
 import * as React from 'react'
 import Layout from '../components/layout-bootstrap'
 import Seo from '../components/seo'
-import Polaroid from '../components/polaroid'
-import styled from 'styled-components'
+import { graphql } from "gatsby"
+import Gallery from '../components/gallery'
 
-import TestVImage from "../images/lutherie_5.jpg"
-import TestHImage from "../images/lutherie_1.jpg"
+// Could not manage to use gatsby-plugin-image to retrieve img from mdx path
 
+const Pro = ({data}) => {
 
-const GalleryContent = styled.div
-    `
-    border: 2px;
-    border-style: dashed;
-    border-color:yellow;
-    display: flex;
-    flex-direction: row;    
-    align-items:flex-start;
-    flex-wrap:wrap;
-    justify-content:space-between;
-`
-//justify-content:space-around;
-
-const SamplePolaroidV = {
-  img : TestVImage,
-  date:'2022/04/02' ,
-  text:"Rosace"
-}
-
-const SamplePolaroidH = {
-  img : TestHImage,
-  date:'2022/04/02' ,
-  text:"Rosace"
-}
-
-const Perso = () => {
   return (
       <Layout pageTitle="DIY projects">
-        <h2>A collection of DIY projects</h2>
-        <div className='row'>
-          <div className='col-5'></div>
-          <div className='col-5'></div>
-            <div className='row'>
-              <div className='col-3'>
-                <Polaroid data={SamplePolaroidV}></Polaroid>
-              </div>
-              <div className='col-3'>
-                <Polaroid data={SamplePolaroidH}></Polaroid>
-              </div>
-              <div className='col-3'>
-                <Polaroid data={SamplePolaroidH}></Polaroid>
-              </div>
-              <div className='col-3'>
-                <Polaroid data={SamplePolaroidV}></Polaroid>
-              </div>
-            </div> 
-            <div className='row'>  
-              <div className='col-3'>
-                <Polaroid data={SamplePolaroidV}></Polaroid>
-              </div>
-            </div>
-         </div>        
+        
+        <h3>Some DIY projects - [UNDER CONSTRUCTION]</h3>
+        <Gallery data={data}></Gallery>
+        
       </Layout>
   )
 }
+
+
+export const query = graphql`
+query PersoQuery {
+  allMarkdownRemark (
+    filter: {fileAbsolutePath: {regex: "/DIY/"}
+    }
+    sort: {
+      fields: [frontmatter___date, frontmatter___title]
+      order: [DESC, ASC]
+    }
+    ){
+    nodes {
+      html
+      frontmatter {
+        title
+        summary
+        date
+        link
+        keywords
+        picture {
+          childImageSharp {
+            fluid{
+              ...GatsbyImageSharpFluid
+              aspectRatio
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
 export const Head = () => <Seo title="Personal portfolio" />
-export default Perso
+export default Pro

@@ -11,7 +11,7 @@ const Pro = ({data}) => {
   return (
       <Layout pageTitle="Work projects">
         
-        <h3>A collection of work related articles</h3>
+        <h3>A collection of work related articles - [UNDER CONSTRUCTION]</h3>
         <Gallery data={data}></Gallery>
         
       </Layout>

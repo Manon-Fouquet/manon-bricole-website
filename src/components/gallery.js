@@ -2,8 +2,6 @@ import * as React from 'react'
 import { Card, Button ,Row,Col,Container} from 'react-bootstrap'
 import Img from 'gatsby-image'
 
-import { graphql } from "gatsby"
-
 // Could not manage to use gatsby-plugin-image to retrieve img from mdx path
 
 const Gallery = ({data}) => { return(

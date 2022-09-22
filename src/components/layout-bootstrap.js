@@ -28,6 +28,7 @@ const Layout = ({ pageTitle, children }) => {
               <Nav className="me-auto">
                 <Nav.Link href="/pro/">Work projects</Nav.Link> 
                 <Nav.Link href="/perso/">DIY</Nav.Link> 
+                <Nav.Link href="/art/">Art-work</Nav.Link> 
                 <Nav.Link href="/contact/">Contact</Nav.Link>
                   <NavDropdown title="CV" id="basic-nav-dropdown">
                     <NavDropdown.Item href={CV_EN}>english</NavDropdown.Item>
