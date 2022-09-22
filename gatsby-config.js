@@ -23,7 +23,28 @@ module.exports = {
         name:'pro_img'
       }
     },
-
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `diy`,
+        path: `${__dirname}/src/data/DIY`,
+        name:'perso_articles'
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/data/DIY/images`,
+        name:'perso_img'
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/data/art`,
+        name:'art'
+      }
+    },
     `gatsby-transformer-sharp`,
   {
     resolve: `gatsby-transformer-remark`,
