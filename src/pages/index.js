@@ -10,7 +10,7 @@ const IndexPage = () => {
         <p style={{fontSize:"1.1rem", textAlign:"center"}}><i>Since 10 years, I have worked in applied mathematics and have developped
            strong methodological and technical skills to model and optimize complex systems. I'm a life-long learner, always trying to
            improve my skills on new topics, methods and technologies. On this website, you can find a collection of
-           my professional projects (and also some projects I do as hobbies, for fun!)
+           my  <a href = './pro/'>professional projects</a>  (and also some <a href = './perso/'>projects I do as hobbies</a>, for fun!)
         </i></p> 
         <p>Based on my previous experiences, I can offer the following services</p>
         <Accordion defaultActiveKey="-1">
@@ -48,7 +48,8 @@ const IndexPage = () => {
       <Accordion.Item eventKey="2">
         <Accordion.Header>Data analysis</Accordion.Header>
         <Accordion.Body>
-        I can conduct investigations on your data sets using Python (Pandas, Seaborn, Plotly,), following the CRISP-DM methodology (Cross-Industry Standard Process for Data Mining)
+        I can conduct investigations on your datasets using Python (Pandas, Seaborn, Plotly), following the CRISP-DM methodology (Cross-Industry Standard Process for Data Mining).
+        A report with useful visualizations will be provided.
         </Accordion.Body>
       </Accordion.Item>
 
@@ -66,8 +67,7 @@ const IndexPage = () => {
         <Accordion.Body>
           I have developped a strong knowledge of electricity networks through my education at Mines ParisTech
           and during my work experience at Artelys. I have contributed to the development of auction clearing
-          algorithms for several energy markets, and implemented several optimization models for power systems,
-          see some examples <a href = './pro.js'>here</a>.
+          algorithms for several energy markets, and implemented several optimization models for power systems.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
