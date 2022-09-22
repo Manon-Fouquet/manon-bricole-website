@@ -9,6 +9,10 @@ import { GatsbyImage } from "gatsby-plugin-image";
 const ArtWork = ({data}) => { return (
   <Layout pageTitle="Art work">    
 
+        
+    <h3>Water painting</h3>
+        
+        <p> I used to paint a while ago, here are some modest water colors :)</p>
     <Container fluid="md"> 
         <Row className='mt-4'  >
           {

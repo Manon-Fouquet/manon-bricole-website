@@ -4,7 +4,7 @@ date:   "2016-05-01"
 slug:   "CIE"
 summary: "I developped a MILP model of the Ivory Coast power system in Artelys Crystal. This model is used for the mid-term planning of the system (hydro + thermal plants)."
 link:   "empty"
-picture: "./images/"
+picture: ""
 keywords: 
     - "project management"
     - "markets"

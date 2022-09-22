@@ -12,6 +12,9 @@ const Pro = ({data}) => {
       <Layout pageTitle="DIY projects">
         
         <h3>Some DIY projects - [UNDER CONSTRUCTION]</h3>
+        
+        <p> I love building things by myself. Here are a few DIY works in my house and other small projects.
+        </p>
         <Gallery data={data}></Gallery>
         
       </Layout>

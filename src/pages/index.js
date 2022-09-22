@@ -6,10 +6,13 @@ import Accordion from 'react-bootstrap/Accordion';
 const IndexPage = () => {
   return (
       <Layout pageTitle="Home Page"  >
-        <p style={{fontSize:"1.1rem"}}>Since 10 years, I have worked in applied mathematics and have developped
-           strong methodological and technical skills to model and optimize complex systems.
-           I can offer the following services</p> 
-      
+        
+        <p style={{fontSize:"1.1rem", textAlign:"center"}}><i>Since 10 years, I have worked in applied mathematics and have developped
+           strong methodological and technical skills to model and optimize complex systems. I'm a life-long learner, always trying to
+           improve my skills on new topics, methods and technologies. On this website, you can find a collection of
+           my professional projects (and also some projects I do as hobbies, for fun!)
+        </i></p> 
+        <p>Based on my previous experiences, I can offer the following services</p>
         <Accordion defaultActiveKey="-1">
         <Accordion.Item eventKey="0">
             <Accordion.Header>Expertise in system modelling</Accordion.Header>

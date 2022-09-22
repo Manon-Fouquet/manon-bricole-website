@@ -12,6 +12,10 @@ const Pro = ({data}) => {
       <Layout pageTitle="Work projects">
         
         <h3>A collection of work related articles - [UNDER CONSTRUCTION]</h3>
+
+       <p> Here are a few projects on which I had the opportunity to work, either as developper, project manager
+        or system expert.
+        </p>
         <Gallery data={data}></Gallery>
         
       </Layout>
