@@ -19,16 +19,11 @@ const Pro = ({data}) => {
 }
 
 
-export const query = graphql`
-query ProQuery {
-  allMarkdownRemark (
-    filter: {fileAbsolutePath: {regex: "/work/"}
-    }
-    sort: {
-      fields: [frontmatter___date, frontmatter___title]
-      order: [DESC, ASC]
-    }
-    ){
+export const query = graphql`query ProQuery {
+  allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/work/"}}
+    sort: {fields: [frontmatter___date, frontmatter___title], order: [DESC, ASC]}
+  ) {
     nodes {
       html
       frontmatter {
@@ -39,10 +34,9 @@ query ProQuery {
         keywords
         picture {
           childImageSharp {
-            fluid{
-              ...GatsbyImageSharpFluid
-              aspectRatio
-            }
+            gatsbyImageData(
+              height: 200
+              )
           }
         }
       }

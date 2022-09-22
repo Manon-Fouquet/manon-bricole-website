@@ -19,16 +19,12 @@ const Pro = ({data}) => {
 }
 
 
-export const query = graphql`
-query PersoQuery {
-  allMarkdownRemark (
-    filter: {fileAbsolutePath: {regex: "/DIY/"}
-    }
+export const query = graphql`query PersoQuery {
+  allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/DIY/"}}
     sort: {
-      fields: [frontmatter___date, frontmatter___title]
-      order: [DESC, ASC]
-    }
-    ){
+      fields: [frontmatter___date, frontmatter___title], 
+      order: [DESC, ASC]}) {
     nodes {
       html
       frontmatter {
@@ -39,10 +35,7 @@ query PersoQuery {
         keywords
         picture {
           childImageSharp {
-            fluid{
-              ...GatsbyImageSharpFluid
-              aspectRatio
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
