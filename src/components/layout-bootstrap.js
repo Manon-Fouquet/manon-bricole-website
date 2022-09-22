@@ -17,15 +17,15 @@ const Layout = ({ pageTitle, children }) => {
   }
 `)
   return (
-    <body>
-      <Container>
-        <Row>
-          <Navbar bg="white" expand="lg"  fixed='top'>
+    <body >
+      <Container fluid='xl' >
+        <Row >
+          <Navbar bg="white" expand="lg"  fixed='top' >
             <Container>
               <Navbar.Brand href="/">{data.site.siteMetadata.title}</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+              <Nav >
                 <Nav.Link href="/pro/">Work projects</Nav.Link> 
                 <Nav.Link href="/perso/">DIY</Nav.Link> 
                 <Nav.Link href="/art/">Art-work</Nav.Link> 
@@ -46,9 +46,7 @@ const Layout = ({ pageTitle, children }) => {
         </Row>
 
         <Row>
-          <main>
-              {children}
-          </main>
+            {children}
         </Row> 
       </Container>  
     </body>
