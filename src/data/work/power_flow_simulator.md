@@ -6,8 +6,9 @@ summary: "I specified and managed the evolutions of a power flow simulator, and 
 link: "https://www.tennet.eu/our-key-tasks/innovations/powerflow-simulator"
 picture: "./images/powerflow.png"
 keywords: 
+    - "frontend"
+    - "React"
     - "physical models"
     - "markets"
-    - "React"
     - "project management"
 ---
