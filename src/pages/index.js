@@ -8,22 +8,21 @@ const IndexPage = () => {
       <Layout pageTitle="Home Page"  >
         
         <p style={{fontSize:"1.1rem", textAlign:"center"}}><i>Since 10 years, I have worked in applied mathematics and have developped
-           strong methodological and technical skills to model and optimize complex systems. I'm a life-long learner, always trying to
-           improve my skills on new topics, methods and technologies. On this website, you can find a collection of
-           my  <a href = './pro/'>professional projects</a>  (and also some <a href = './perso/'>projects I do as hobbies</a>, for fun!)
+           strong methodological and technical skills to model and optimize complex systems. 
+           On this website, you can find a collection of my  <a href = './pro/'>professional projects</a>  (and also some <a href = './perso/'>projects I do as hobbies</a>, for fun!)
         </i></p> 
-        <p>Based on my previous experiences, I can offer the following services</p>
+        <p>Based on my previous experiences, I can offer you the following services</p>
         <Accordion defaultActiveKey="-1">
         <Accordion.Item eventKey="0">
             <Accordion.Header>Expertise in system modelling</Accordion.Header>
             <Accordion.Body>
               I can help you with system modelling in various mathematical framework (MILP, NLP, dynamic optimization, Machine Learning)
               <ol>
-                <li> We will define together which is the best compromise for your system (e.g. among speed, robustness, complexity, requirement for optimality, reproducibility)</li>
-                <li> We will agree on inputs and outputs of the system</li>
-                <li> I will formulate the mathematical model, ready for implementation</li>   
-                <li> Optional: I can implement the model in your favourite environment</li>    
-                <li> Optional: I can set-up an API to call the optimization model and retrieve results</li>
+                <li> Choose the best modelling framework for your system (best compromise among speed, robustness, complexity, requirement for optimality, reproducibility)</li>
+                <li> Define what are the inputs and outputs of the system</li>
+                <li> Formulation of the mathematical model, ready for implementation</li>   
+                <li> Optional: Implementation of the model in your favourite environment</li>    
+                <li> Optional: Set-up of an API to call the optimization model and retrieve results</li>
               </ol>
             </Accordion.Body>
           </Accordion.Item>
@@ -32,15 +31,15 @@ const IndexPage = () => {
             <Accordion.Body>
               I have coordinated several projects in highly technical environments and can offer you my services to set-up a new project.
               <ol>
-                <li>We define together a set of business requirements</li>
-                <li>We assess the available and required data for the project</li>
-                <li>We agree on a validation methodology for software releases</li>
-                <li>I propose a data architecture</li>                
-                <li>I propose a work plan, with intermediate deliveries</li>
-                <li>I set-up the technical architecture and tooling for collaborative development</li>                
-                <li>I organize coordination meetings every 1 or 2 weeks with your organization</li>
-                <li>I coordinate the work with software developpers and/or participate to software developements</li>
-                <li>I organize software releases (intermediate and final versions)</li>
+                <li>Business understanding: some meetings to draw set of business requirements</li>
+                <li>Assessment of the available and required data for the project</li>
+                <li>Proposal of a validation methodology for software releases</li>
+                <li>Proposal of a data and software architecture for the project</li>                
+                <li>Definition of a work plan, with intermediate deliveries</li>
+                <li>Set-up of the technical architecture and tooling for collaborative development</li>                
+                <li>Organization of project status meetings (every 1 or 2 weeks)</li>
+                <li>Coordination of the work with software developpers (realization of some/all software developements)</li>
+                <li>Intermediate and final software releases</li>
               </ol>
             </Accordion.Body>
           </Accordion.Item>
@@ -57,7 +56,13 @@ const IndexPage = () => {
       <Accordion.Item eventKey="3">
         <Accordion.Header>Frontend development</Accordion.Header>
         <Accordion.Body>
-          Creation of your website with a responsive design using Javascript/React/Webpack
+          Creation of your website, front-end development 
+          <ol>
+                <li>Discussion on the site content and expected functionalities</li>
+                <li>Optional : graphical design</li>
+                <li>Optional : Blueprints of the user navigation throughout the website</li>
+                <li>Implementation with a responsive design using Javascript/React/Webpack</li>
+            </ol>
         </Accordion.Body>
       </Accordion.Item>
 
