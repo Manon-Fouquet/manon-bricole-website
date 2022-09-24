@@ -7,10 +7,18 @@ import {
 
 import './visitCard.scss'
 
+import {
+  circleFrame,
+  circlePic,
+  circleMoon
+} from './headerMoon.module.scss'
+
+import HeaderCircle from "../images/profile.png"
+
 const VisitCard = (props) => {
   return (
 <div className="flip-container centered">
-  
+    
     <div className="back">
       
     
@@ -33,7 +41,25 @@ const VisitCard = (props) => {
         <FontAwesomeIcon icon={faGithub}/>
       </a>
   </div>
-  <div className='leftBox'></div>
+  <div className={circleFrame} style={{
+          zIndex:100, 
+          top:"30px", 
+          borderColor:'black',
+          borderWidth:'1px',
+          boxShadow:"10px 10px 10px 10px rgba(0, 0, 0, 0.1)"}}>
+      <div className = {circleMoon} style={{
+          backgroundColor:'rgba(6,137,190,0.5)',
+          width:"120px",
+          height:"120px"
+        }} >
+        <div className={circlePic} style={{
+          backgroundImage: `url(${HeaderCircle})`,
+          left:"0px",
+          top:"0px",
+          width:"120px",
+          height:"120px"}}></div>
+      </div>
+    </div>
 </div>      
   )
 }

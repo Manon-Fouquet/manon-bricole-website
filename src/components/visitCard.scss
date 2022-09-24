@@ -59,7 +59,7 @@ h3{
    h1, p, .font-a-icons {
       color: $dark;
       font-family: $lato;
-      margin-left: 30%;
+      margin-left: 35%;
       line-height: 90%;
    }   
    
@@ -113,7 +113,7 @@ h3{
       width: 45px;
       padding: 5px;
       top: 75px;
-      left: 30%;
+      left: 35%;
       display: inline-block;
       border: 2px solid $dark;
       margin: 5px;
@@ -143,8 +143,8 @@ h3{
 /* THE FLIP EFFECT */
 
 .flip-container, .front, .back {
-   height: 350px;
-   width: 600px;
+   height: 300px;
+   width: 500px;
 }
 
 .front, .back {

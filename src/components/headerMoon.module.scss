@@ -2,7 +2,7 @@ $diameter : 150px;
 $crescent:0.25;
 $borderWidth:5px;
 $shift:50px;
-$banner_height:200px;
+$banner_height:150px;
 $moonColor:rgb(3, 68, 94);
 
 .circle-header{
@@ -27,6 +27,15 @@ $moonColor:rgb(3, 68, 94);
     top:calc($banner_height - $diameter + $shift);
   }
 
+  .circle-frame-horizontal{
+    position: relative;
+    border-radius: 50%;
+    background-color:$moonColor;
+    height: $diameter;
+    width: $diameter;
+    left:calc($banner_height - $diameter + $shift);
+  }
+
 .circle-moon{
     position: absolute;
     top:0px; 
@@ -46,5 +55,5 @@ $moonColor:rgb(3, 68, 94);
     left:$borderWidth;
     width: $diameter*(1-$crescent); 
     height: $diameter*(1-$crescent); 
-    background-size: contain;
+    background-size: cover;
 }
