@@ -1,0 +1,194 @@
+/*
+Inspired from https://codepen.io/Gothburz/pen/PPePoG
+
+Tried to install npm package from
+https://www.npmjs.com/package/@fontsource/lato
+but finally rather used external link + loader plugin
+`gatsby-omni-font-loader`
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+
+$lato: "Lato";
+$dark: rgb(21, 4, 80);
+$light: #8390bc;
+$hover: #3f3f3f;
+
+/* CENTERING */
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* /end */
+
+body{
+   //background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/326221/bg.jpg);
+   background-attachment: fixed;
+   background-size:cover;
+   background-repeat:no-repeat;
+}
+
+h3{
+   position: relative;
+   left: 45%;
+}
+
+/* THE FRONT */
+
+.front{
+   // background-image:url(//background-image:url( [600px * 350px]);
+   background-size:cover;
+   background-color: $dark;
+}
+
+/* /end */
+
+/* THE BACK */
+
+.back{
+   //background-image:url( [600px * 300px]);
+   background-color: $light;
+   background-size:cover;
+   
+   h1, p, .font-a-icons {
+      color: $dark;
+      font-family: $lato;
+      margin-left: 30%;
+      line-height: 90%;
+   }   
+   
+   h1{
+      margin-top: 5%;    
+   }
+   
+   p{
+      font-size: 16px;
+      padding-bottom: 15px;
+      width: 35%;
+      border-bottom: 2px solid $dark;
+   }
+   
+   .bold{
+      font-weight: bold;
+   }
+   
+   .font-a-icons{    
+      margin-top: 25px;
+      
+      .icon-group{
+         margin-top: 8px;
+      }
+      
+      span, .link, .fa, a{
+         color: $dark;
+      }  
+      
+      .fa{
+         font-size: 18px;
+      }
+      
+      span, a{
+         font-size: 16px;
+      }
+      
+      a, .website{
+         text-decoration: none;
+      }
+      
+      a:hover, .website:hover{
+         color: $hover;
+      }     
+   }
+   .icon-box{
+      position: relative;
+      color: $dark;
+      font-size: 24px;
+      height: 45px;
+      width: 45px;
+      padding: 5px;
+      top: 75px;
+      left: 30%;
+      display: inline-block;
+      border: 2px solid $dark;
+      margin: 5px;
+      text-align: center;
+      cursor: pointer;
+      -webkit-transition: all ease 0.5s;
+	      -moz-transition: all ease 0.5s;
+	         transition: all ease 0.5s;
+   }
+   .icon-box:hover {
+    box-shadow: inset 0 50px 0 0 $dark;
+    color: $light;
+   }
+}
+
+/* /end */
+
+/* THE FLIP EFFECT */
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+      cursor: pointer;
+	}
+
+.flip-container, .front, .back {
+   height: 350px;
+   width: 600px;
+}
+
+.flipper {
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+}
+
+.front {
+	z-index: 2;
+	/* firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+.vertical.flip-container {
+	position: relative;
+}
+
+	.vertical .back {
+		transform: rotateX(180deg);
+	}
+
+	.vertical.flip-container .flipper {
+		transform-origin: 100% 400x; 
+	}
+
+	.vertical.flip-container:hover .flipper {
+		transform: rotateX(-180deg);
+	}

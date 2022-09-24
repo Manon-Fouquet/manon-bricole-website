@@ -1,13 +1,14 @@
 import * as React from 'react'
 import Layout from '../components/layout-bootstrap'
 import Seo from '../components/seo'
+import VisitCard from '../components/visitCard'
 
 //justify-content:space-around;
 
 const IndexPage = () => {
   return (
       <Layout pageTitle="Home Page">
-          You can email me at ms.manonfouquet[at]gmail.com
+        <VisitCard email="ms.manonfouquet@gmail.com" phone="+33 (0)6 41 69 70 83" ></VisitCard>
       </Layout>
   )
 }
