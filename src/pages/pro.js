@@ -3,19 +3,33 @@ import Layout from '../components/layout-bootstrap'
 import Seo from '../components/seo'
 import { graphql } from "gatsby"
 import Gallery from '../components/gallery'
+import styled from 'styled-components'
 
-// Could not manage to use gatsby-plugin-image to retrieve img from mdx path
+const IntroPLeft = styled.p
+`
+  font-size:1.1rem;
+  text-align:left;
+  margin-bottom:1.5rem;
+  font-style:italic;
+`
+
+const SubHeaders = styled.h2
+`
+  margin-bottom:2rem;
+  margin-top:2rem;
+  text-align:left;  
+  justify-content:left;
+`
 
 const Pro = ({data}) => {
 
   return (
       <Layout pageTitle="Work projects">
-        
-        <h3>A collection of work related articles - [UNDER CONSTRUCTION]</h3>
-
-       <p> Here are a few projects on which I had the opportunity to work, either as developper, project manager
-        or system expert.
-        </p>
+         
+      <SubHeaders>A collection of work related articles - [UNDER CONSTRUCTION]</SubHeaders>
+      
+      <IntroPLeft> Here are a few projects on which I had the opportunity to work, either as developper, project manager
+        or system expert.</IntroPLeft>
         <Gallery data={data}></Gallery>
         
       </Layout>

@@ -1,18 +1,50 @@
 import * as React from 'react'
 import Layout from '../components/layout-bootstrap'
+import HeaderMoon from '../components/headerMoon'
 import Seo from '../components/seo'
 import Accordion from 'react-bootstrap/Accordion';
+import { Row, Col, Container } from 'react-bootstrap';
+import { StaticImage } from 'gatsby-plugin-image';
+import styled from 'styled-components';
 
+const IntroP = styled.p
+`
+  font-size:1.1rem;
+  text-align:center;
+  margin-bottom:2.5rem;
+  font-style:italic;
+`
+
+const SubHeaders = styled.h2
+`
+  margin-bottom:2rem;
+  margin-top:2rem;
+  text-align:left;  
+  justify-content:left;
+`
+
+
+const TechnoList = styled.h4
+`
+  margin-bottom:1.5rem;
+`
 const IndexPage = () => {
   return (
       <Layout pageTitle="Home Page"  >
-        
-        <p style={{fontSize:"1.1rem", textAlign:"center"}}><i>Since 10 years, I have worked in applied mathematics and have developped
+
+        <Row>
+          <HeaderMoon/>
+        </Row>
+
+       <Row style = {{paddingBottom:"2rem", marginLeft:"1.5rem"}}> 
+        <IntroP>Since 10 years, I have worked in applied mathematics and have developped
            strong methodological and technical skills to model and optimize complex systems. 
            On this website, you can find a collection of my  <a href = './pro/'>professional projects</a>  (and also some <a href = './perso/'>projects I do as hobbies</a>, for fun!)
-        </i></p> 
-        <p>Based on my previous experiences, I can offer you the following services</p>
-        <Accordion defaultActiveKey="-1">
+        </IntroP> 
+
+        <SubHeaders>Services</SubHeaders>
+        <p style={{fontSize:"1.1rem", textAlign:"left",marginLeft:"1.5rem"}}>Based on my previous experiences, I can offer you the following services</p>
+        <Accordion defaultActiveKey="-1" style={{marginLeft:"1.5rem"}}>
         <Accordion.Item eventKey="0">
             <Accordion.Header>Expertise in system modelling</Accordion.Header>
             <Accordion.Body>
@@ -76,6 +108,37 @@ const IndexPage = () => {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
+
+    </Row >
+    
+    <SubHeaders>Tecnologies</SubHeaders>
+    <Container style={{marginLeft:"1.5rem"}}>
+    <Row><TechnoList>Backend</TechnoList></Row>
+    <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
+      <Col> <StaticImage src='../images/icons/python.png'  height={100}/></Col>
+      <Col><StaticImage src='../images/icons/pandas.png'  height={100}/></Col>
+      <Col><StaticImage src='../images/icons/seaborn.png'  height={100}/></Col>
+      <Col><StaticImage src='../images/icons/scikit.png'  height={100}/></Col>
+      <Col><StaticImage src='../images/icons/plotly.png'  height={100}/></Col>
+      <Col><StaticImage src='../images/icons/java.png'  height={100}/></Col>
+      <Col><StaticImage src='../images/icons/docker.png'  height={100}/></Col>
+    </Row> 
+
+    <Row><TechnoList>Frontend</TechnoList></Row> 
+    <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
+    
+      <Col><StaticImage src='../images/icons/javascript.png'  height={100}/></Col>
+      <Col><StaticImage src='../images/icons/react.png'  height={100}/></Col>
+      <Col><StaticImage src='../images/icons/gatsby.png'  height={100}/></Col>
+    </Row>
+    <Row><TechnoList> Simulation and optimization</TechnoList> </Row>
+    <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
+        <Col><StaticImage src='../images/icons/AMPL.png'  height={100}/></Col>
+        <Col><StaticImage src='../images/icons/XPRESS.png'  height={100}/></Col>
+        <Col><StaticImage src='../images/icons/modelica.png'  height={100}/></Col>
+        <Col><StaticImage src='../images/icons/MATLAB.png'  height={100}/></Col>
+    </Row>
+    </Container>
   </Layout>
   )
 }
