@@ -21,8 +21,8 @@ const IndexPage = () => {
                 <li> Choose the best modelling framework for your system (best compromise among speed, robustness, complexity, requirement for optimality, reproducibility)</li>
                 <li> Define what are the inputs and outputs of the system</li>
                 <li> Formulation of the mathematical model, ready for implementation</li>   
-                <li> Optional: Implementation of the model in your favourite environment</li>    
-                <li> Optional: Set-up of an API to call the optimization model and retrieve results</li>
+                <li> Optional: implementation of the model in your favourite environment</li>    
+                <li> Optional: set-up of an API to call the optimization model and retrieve results</li>
               </ol>
             </Accordion.Body>
           </Accordion.Item>
@@ -31,7 +31,7 @@ const IndexPage = () => {
             <Accordion.Body>
               I have coordinated several projects in highly technical environments and can offer you my services to set-up a new project.
               <ol>
-                <li>Business understanding: some meetings to draw set of business requirements</li>
+                <li>Business understanding: some meetings to write a set of business requirements</li>
                 <li>Assessment of the available and required data for the project</li>
                 <li>Proposal of a validation methodology for software releases</li>
                 <li>Proposal of a data and software architecture for the project</li>                
@@ -60,7 +60,7 @@ const IndexPage = () => {
           <ol>
                 <li>Discussion on the site content and expected functionalities</li>
                 <li>Optional : graphical design</li>
-                <li>Optional : Blueprints of the user navigation throughout the website</li>
+                <li>Optional : blueprints of the user navigation throughout the website</li>
                 <li>Implementation with a responsive design using Javascript/React/Webpack</li>
             </ol>
         </Accordion.Body>
@@ -76,7 +76,7 @@ const IndexPage = () => {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
-      </Layout>
+  </Layout>
   )
 }
 export const Head = () => <Seo title="Home Page" />
