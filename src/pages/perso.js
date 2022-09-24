@@ -3,34 +3,19 @@ import Layout from '../components/layout-bootstrap'
 import Seo from '../components/seo'
 import { graphql } from "gatsby"
 import Gallery from '../components/gallery'
-import styled from 'styled-components'
 
-const IntroPLeft = styled.p
-`
-  font-size:1.1rem;
-  text-align:left;
-  margin-bottom:1.5rem;
-  font-style:italic;
-`
-
-const SubHeaders = styled.h2
-`
-  margin-bottom:2rem;
-  margin-top:2rem;
-  text-align:left;  
-  justify-content:left;
-`
-
+import{
+  SubHeaders
+} from '../components/layout.module.scss'
 
 const Pro = ({data}) => {
 
   return (
       <Layout pageTitle="DIY projects">
-        
-        <SubHeaders>Some DIY projects - [UNDER CONSTRUCTION]</SubHeaders>
-        
-        <IntroPLeft> I love building things by myself. Here are a few DIY works in my house and other small projects.
-        </IntroPLeft>
+        <h2 className={SubHeaders}>Some DIY projects - [UNDER CONSTRUCTION]</h2>
+   
+        <p> I love building things by myself. Here are a few DIY works in my house and other small projects.
+        </p>
         <Gallery data={data}></Gallery>
         
       </Layout>

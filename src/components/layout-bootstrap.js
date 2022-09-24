@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     <body >
       <Container fluid='xl' >
         <Row >
-          <Navbar bg="white" expand="lg"  fixed='top'>
+          <Navbar bg="white" expand="lg"  fixed='top' style={{marginBottom:"75px"}}>
             <Container>
               <Navbar.Brand href="/">{data.site.siteMetadata.title}</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
         </Row>
 
 
-        <Row style={{paddingTop:"100px", paddingBottom:"50px"}}>
+        <Row style={{marginTop:"75px"}}>
             {children}
         </Row> 
       </Container>  

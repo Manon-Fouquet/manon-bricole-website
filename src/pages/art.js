@@ -10,7 +10,7 @@ const ArtWork = ({data}) => { return (
   <Layout pageTitle="Art work">    
 
         
-    <h3>Water painting</h3>
+    <h2>Water painting</h2>
         
         <p> I used to paint a while ago, here are some modest water colors :)</p>
     <Container fluid="md"> 
