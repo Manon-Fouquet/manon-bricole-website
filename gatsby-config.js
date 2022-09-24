@@ -78,7 +78,6 @@ module.exports = {
       ],
     },
   },
-  `gatsby-plugin-fontawesome-css`,
   {
     resolve: `gatsby-omni-font-loader`,
     options: {
