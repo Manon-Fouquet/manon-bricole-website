@@ -27,7 +27,8 @@ const Gallery = ({data}) => { return (
                     <Card.Title  as = "h6" style={{color:"rgb(3, 68, 94)"}}>{node.frontmatter.title}</Card.Title>
                     <Card.Text  >
                     <Clamp withTooltip 
-                    lines={7}
+                    lines={5}
+                    maxLines={100}
                     withToggle
                     showMoreElement={({ toggle }) => (
                         <Button size='sm' variant="secondary" onClick={toggle}>
@@ -39,7 +40,7 @@ const Gallery = ({data}) => { return (
                             less
                         </Button>
                     )}>
-                    {node.frontmatter.summary}
+                  {node.frontmatter.summary}
                     </Clamp>
                     </Card.Text>
                     <Card.Text>
