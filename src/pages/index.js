@@ -119,7 +119,7 @@ const IndexPage = () => {
         <Col><StaticImage src='../images/icons/AMPL.png'  height={100}/></Col>
         <Col><StaticImage src='../images/icons/XPRESS.png'  height={100}/></Col>
         <Col><StaticImage src='../images/icons/modelica.png'  height={100}/></Col>
-        <Col><StaticImage src='../images/icons/MATLAB.png'  height={100}/></Col>
+        <Col><StaticImage src='../images/icons/matlab.png'  height={100}/></Col>
     </Row>
     </Container>
   </Layout>
