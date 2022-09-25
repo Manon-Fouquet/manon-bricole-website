@@ -26,6 +26,7 @@
     "react": "^18.1.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
     "react-multiline-clamp": "^2.0.0",
     "sass": "^1.55.0",
     "sharp": "^0.31.0",
