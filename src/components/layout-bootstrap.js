@@ -16,36 +16,41 @@ const Layout = ({ children }) => {
   }
 `)
   return (
-    <body >
-      <Container fluid='xl' >
-        <Row >
-          <Navbar bg="white" expand="lg"  fixed='top' style={{marginBottom:"75px"}}>
-            <Container>
-              <Navbar.Brand href="/">{data.site.siteMetadata.title}</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-              <Nav >
-                <Nav.Link href="/pro/">Work projects</Nav.Link> 
-                <Nav.Link href="/perso/">DIY</Nav.Link> 
-                <Nav.Link href="/art/">Art-work</Nav.Link> 
-                <Nav.Link href="/contact/">Contact</Nav.Link>
-                  <NavDropdown title="CV" id="basic-nav-dropdown">
-                    <NavDropdown.Item href={CV_EN}>english</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href={CV_FR}>french</NavDropdown.Item>
-                  </NavDropdown>
-                </Nav>
-              </Navbar.Collapse>
-            </Container>
-          </Navbar>
-        </Row>
+      <Container fluid="xxl" style={{padding:"0px"}} >
+        <Navbar bg="white" expand="sm"  fixed='top' style={{
+          marginBottom:"75px" , 
+          paddingLeft:"12px", 
+          paddingRight:"12px",
+          width:"100%"}}>
 
+            <Navbar.Brand href="/">{data.site.siteMetadata.title}</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+            <Nav >
+              <Nav.Link href="/pro/">Work projects</Nav.Link> 
+              <NavDropdown title="Personal projects" id="basic-nav-dropdown">
+                <NavDropdown.Item href="/perso/">DIY</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/art/">Painting</NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="/contact/">Contact</Nav.Link>
+              <NavDropdown title="CV" id="basic-nav-dropdown">
+                <NavDropdown.Item href={CV_EN}>english</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href={CV_FR}>french</NavDropdown.Item>
+              </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
+        </Navbar>
 
-        <Row style={{marginTop:"75px"}}>
+        <div style={{marginTop:"75px", 
+                      width:"100%", 
+                      padding:"12px",
+                      marginLeft:"0px",
+                      marginRight:"0px"}}>
             {children}
-        </Row> 
+        </div> 
       </Container>  
-    </body>
   )
 }
 export default Layout

@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Gallery from '../components/gallery'
 
 import{
-  SubHeaders
+  subHeaders
 } from '../components/layout.module.scss'
 
 const Pro = ({data}) => {
@@ -13,7 +13,7 @@ const Pro = ({data}) => {
   return (
       <Layout pageTitle="Work projects">
      
-      <h2 className={SubHeaders}>A collection of work related articles - [UNDER CONSTRUCTION]</h2>
+      <h2 className={subHeaders}>A collection of work related articles - [UNDER CONSTRUCTION]</h2>
    
       <p> Here are a few projects on which I had the opportunity to work, either as developper, project manager
         or system expert.</p>

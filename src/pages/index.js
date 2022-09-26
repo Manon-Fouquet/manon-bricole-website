@@ -6,28 +6,27 @@ import Accordion from 'react-bootstrap/Accordion';
 import { Row, Col, Container } from 'react-bootstrap';
 import { StaticImage } from 'gatsby-plugin-image';
 import {
-  SubHeaders,
+  subHeaders,
   introP,
-  TechnoList
+  technoList
 } from '../components/layout.module.scss';
 
 const IndexPage = () => {
   return (
       <Layout pageTitle="Home Page"  >
+        
+      <HeaderMoon/>
 
-        <Row>
-          <HeaderMoon/>
-        </Row>
+      <p className={introP}>Since 10 years, I have worked in applied mathematics and have developped
+          strong methodological and technical skills to model and optimize complex systems. 
+          On this website, you can find a collection of my  <a href = './pro/'>professional projects</a>  (and also some <a href = './perso/'>projects I do as hobbies</a>, for fun!)
+      </p> 
 
-       <Row style = {{paddingBottom:"2rem", marginLeft:"1.5rem"}}> 
-        <p className={introP}>Since 10 years, I have worked in applied mathematics and have developped
-           strong methodological and technical skills to model and optimize complex systems. 
-           On this website, you can find a collection of my  <a href = './pro/'>professional projects</a>  (and also some <a href = './perso/'>projects I do as hobbies</a>, for fun!)
-        </p> 
-
-        <h2 className={SubHeaders}>Services</h2>
-        <p style={{fontSize:"1.1rem", textAlign:"left",marginLeft:"1.5rem"}}>Based on my previous experiences, I can offer you the following services</p>
-        <Accordion defaultActiveKey="-1" style={{marginLeft:"1.5rem"}}>
+      <h2 className={subHeaders}>Services</h2>
+      
+      <p style={{fontSize:"1.1rem", textAlign:"left"}}>Based on my previous experiences, I can offer you the following services</p>
+      
+      <Accordion defaultActiveKey="-1" style={{marginLeft:"1.5rem"}}>
         <Accordion.Item eventKey="0">
             <Accordion.Header>Expertise in system modelling</Accordion.Header>
             <Accordion.Body>
@@ -92,35 +91,34 @@ const IndexPage = () => {
       </Accordion.Item>
     </Accordion>
 
-    </Row >
+    <h2 className={subHeaders}>Tecnologies</h2>
     
-    <h2 className={SubHeaders}>Tecnologies</h2>
-    <Container style={{marginLeft:"1.5rem"}}>
-    <Row><h4 className={TechnoList}>Frontend</h4></Row>
-    <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
-      <Col> <StaticImage src='../images/icons/python.png'  height={100}/></Col>
-      <Col><StaticImage src='../images/icons/pandas.png'  height={100}/></Col>
-      <Col><StaticImage src='../images/icons/seaborn.png'  height={100}/></Col>
-      <Col><StaticImage src='../images/icons/scikit.png'  height={100}/></Col>
-      <Col><StaticImage src='../images/icons/plotly.png'  height={100}/></Col>
-      <Col><StaticImage src='../images/icons/java.png'  height={100}/></Col>
-      <Col><StaticImage src='../images/icons/docker.png'  height={100}/></Col>
-    </Row> 
+    <Container style={{paddingLeft:"1.5rem"}}>
+      <Row><h4 className={technoList}>Backend</h4></Row>
+      <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
+        <Col> <StaticImage src='../images/icons/python.png' height={50} alt="python"/></Col>
+        <Col><StaticImage src='../images/icons/pandas.png'  height={50} alt="pandas"/></Col>
+        <Col><StaticImage src='../images/icons/seaborn.png' height={50} alt="seaborn"/></Col>
+        <Col><StaticImage src='../images/icons/scikit.png'  height={50} alt="scikit"/></Col>
+        <Col><StaticImage src='../images/icons/plotly.png'  height={50} alt="plotly"/></Col>
+        <Col><StaticImage src='../images/icons/java.png'    height={50} alt="java"/></Col>
+        <Col><StaticImage src='../images/icons/docker.png'  height={50} alt="docker"/></Col>
+      </Row> 
 
-    <Row><h4 className={TechnoList}>Frontend</h4></Row> 
-    <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
-    
-      <Col><StaticImage src='../images/icons/javascript.png'  height={100}/></Col>
-      <Col><StaticImage src='../images/icons/react.png'  height={100}/></Col>
-      <Col><StaticImage src='../images/icons/gatsby.png'  height={100}/></Col>
-    </Row>
-    <Row><h4 className={TechnoList}>Simulation and optimization</h4> </Row>
-    <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
-        <Col><StaticImage src='../images/icons/AMPL.png'  height={100}/></Col>
-        <Col><StaticImage src='../images/icons/XPRESS.png'  height={100}/></Col>
-        <Col><StaticImage src='../images/icons/modelica.png'  height={100}/></Col>
-        <Col><StaticImage src='../images/icons/matlab.png'  height={100}/></Col>
-    </Row>
+      <Row><h4 className={technoList}>Frontend</h4></Row> 
+      <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
+      
+        <Col><StaticImage src='../images/icons/javascript.png'  height={50} alt="javascript"/></Col>
+        <Col><StaticImage src='../images/icons/react.png'       height={50} alt="react"/></Col>
+        <Col><StaticImage src='../images/icons/gatsby.png'      height={50} alt="gatsby"/></Col>
+      </Row>
+      <Row><h4 className={technoList}>Simulation and optimization</h4> </Row>
+      <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
+          <Col><StaticImage src='../images/icons/AMPL.png'      height={50} alt="AMPL"/></Col>
+          <Col><StaticImage src='../images/icons/XPRESS.png'    height={50} alt="XPRESS"/></Col>
+          <Col><StaticImage src='../images/icons/modelica.png'  height={50} alt="Modelica"/></Col>
+          <Col><StaticImage src='../images/icons/matlab.png'    height={50} alt="MATLAB"/></Col>
+      </Row>
     </Container>
   </Layout>
   )

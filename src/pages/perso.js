@@ -5,14 +5,14 @@ import { graphql } from "gatsby"
 import Gallery from '../components/gallery'
 
 import{
-  SubHeaders
+  subHeaders
 } from '../components/layout.module.scss'
 
 const Pro = ({data}) => {
 
   return (
       <Layout pageTitle="DIY projects">
-        <h2 className={SubHeaders}>Some DIY projects - [UNDER CONSTRUCTION]</h2>
+        <h2 className={subHeaders}>Some DIY projects - [UNDER CONSTRUCTION]</h2>
    
         <p> I love building things by myself. Here are a few DIY works in my house and other small projects.
         </p>

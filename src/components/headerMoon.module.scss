@@ -13,6 +13,8 @@ $moonColor:rgb(3, 68, 94);
     justify-content: center;
     width:100%;
     top:0px;
+    padding: 0px;
+    margin: 0px;
     height:$banner_height;
     margin-bottom:$shift+20px;
 }
@@ -20,20 +22,12 @@ $moonColor:rgb(3, 68, 94);
 
 .circle-frame{
     position: relative;
+    padding: 0px;
     border-radius: 50%;
     background-color:$moonColor;
     height: $diameter;
     width: $diameter;
     top:calc($banner_height - $diameter + $shift);
-  }
-
-  .circle-frame-horizontal{
-    position: relative;
-    border-radius: 50%;
-    background-color:$moonColor;
-    height: $diameter;
-    width: $diameter;
-    left:calc($banner_height - $diameter + $shift);
   }
 
 .circle-moon{

@@ -48,7 +48,7 @@ const Gallery = ({data}) => { return (
                       {node.frontmatter.keywords && node.frontmatter.keywords.join(", ")}
                     </i>
                     </Card.Text>
-                    <Button size='sm' variant="primary" href={node.frontmatter.link} target="_blank">Link</Button>
+                    <Button size='sm' variant="primary" href={node.frontmatter.link} target="_blank" rel="noopener">Link</Button>
                   </Card.Body>
                 </Card>
               </Col>
