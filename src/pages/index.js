@@ -26,7 +26,7 @@ const IndexPage = () => {
       
       <p style={{fontSize:"1.1rem", textAlign:"left"}}>Based on my previous experiences, I can offer you the following services</p>
       
-      <Accordion defaultActiveKey="-1" style={{marginLeft:"1.5rem"}}>
+      <Accordion defaultActiveKey="-1" style={{marginLeft:"1.5rem", marginBottom:"2rem"}}>
         <Accordion.Item eventKey="0">
             <Accordion.Header>Expertise in system modelling</Accordion.Header>
             <Accordion.Body>
@@ -93,27 +93,27 @@ const IndexPage = () => {
 
     <h2 className={subHeaders}>Tecnologies</h2>
     
-    <Container style={{paddingLeft:"1.5rem"}}>
+    <Container style={{paddingLeft:"1rem"}}>
       <Row><h4 className={technoList}>Backend</h4></Row>
-      <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
+      <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto">
         <Col> <StaticImage src='../images/icons/python.png' height={50} alt="python"/></Col>
         <Col><StaticImage src='../images/icons/pandas.png'  height={50} alt="pandas"/></Col>
         <Col><StaticImage src='../images/icons/seaborn.png' height={50} alt="seaborn"/></Col>
-        <Col><StaticImage src='../images/icons/scikit.png'  height={50} alt="scikit"/></Col>
+        {/* <Col><StaticImage src='../images/icons/scikit.png'  height={50} alt="scikit"/></Col> */}
         <Col><StaticImage src='../images/icons/plotly.png'  height={50} alt="plotly"/></Col>
         <Col><StaticImage src='../images/icons/java.png'    height={50} alt="java"/></Col>
         <Col><StaticImage src='../images/icons/docker.png'  height={50} alt="docker"/></Col>
       </Row> 
 
       <Row><h4 className={technoList}>Frontend</h4></Row> 
-      <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
+      <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto">
       
         <Col><StaticImage src='../images/icons/javascript.png'  height={50} alt="javascript"/></Col>
         <Col><StaticImage src='../images/icons/react.png'       height={50} alt="react"/></Col>
         <Col><StaticImage src='../images/icons/gatsby.png'      height={50} alt="gatsby"/></Col>
       </Row>
       <Row><h4 className={technoList}>Simulation and optimization</h4> </Row>
-      <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto"  style={{paddingBottom:"2rem"}}>
+      <Row xs="3" sm="4" md="5" lg="auto" xl="auto" xxl="auto">
           <Col><StaticImage src='../images/icons/AMPL.png'      height={50} alt="AMPL"/></Col>
           <Col><StaticImage src='../images/icons/XPRESS.png'    height={50} alt="XPRESS"/></Col>
           <Col><StaticImage src='../images/icons/modelica.png'  height={50} alt="Modelica"/></Col>

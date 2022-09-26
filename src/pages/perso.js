@@ -12,7 +12,7 @@ const Pro = ({data}) => {
 
   return (
       <Layout pageTitle="DIY projects">
-        <h2 className={subHeaders}>Some DIY projects - [UNDER CONSTRUCTION]</h2>
+        <h2 className={subHeaders}>Some DIY projects</h2>
    
         <p> I love building things by myself. Here are a few DIY works in my house and other small projects.
         </p>
