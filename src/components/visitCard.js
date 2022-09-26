@@ -19,10 +19,10 @@ const VisitCard = (props) => {
         <div className="icon-group">
           <span className="bold">T: </span><span className="contact">{props.phone}</span>
         <div className="icon-group">
-          <span className="bold">E: </span><a className="contact" href={"mailto:"&props.email} target="_top">{props.email}</a>
+          <span className="bold">E: </span><span className="contact" target="_top">{props.email}</span>
         </div>
         <div className="icon-group">
-          <a className="contact" href="http://www.manon-fouquet.com" target="_blank" rel="noreferrer">www.manon-fouquet.com</a>
+          <a className="contact" href="/">www.manon-fouquet.com</a>
         </div>
       </div>  
     </div>  
