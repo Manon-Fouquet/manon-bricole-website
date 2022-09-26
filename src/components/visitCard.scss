@@ -15,6 +15,18 @@ $dark: rgb(21, 4, 80);
 $light: #d9dff1;
 $hover: #3f3f3f;
 
+$moonColor:rgb(3, 68, 94);
+$backColor:rgb(4, 92, 128);
+$backMoonColor:rgba(228, 242, 248,0.5);
+
+
+$diameter-lg:140px;
+$diameter-md:100px;
+$diameter:80px;
+
+$crescent:0.25;
+$borderWidth:5px;
+
 /* CENTERING */
 
 .centered {
@@ -25,13 +37,6 @@ $hover: #3f3f3f;
   transform: translate(-50%, -50%);
 }
 
-@mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
 
 /* /end */
 
@@ -60,19 +65,21 @@ h3{
       color: $dark;
       font-family: $lato;
       margin-left: 35%;
-      line-height: 90%;
+      line-height: 50%;
    }   
    
    h1{
-      margin-top: 5%;    
+      margin-top: 8%; 
+      font-size: 18px;   
    }
    
+   
    p{
-      font-size: 16px;
       padding-bottom: 15px;
-      width: 35%;
+      width: 40%;
       border-bottom: 2px solid $dark;
    }
+
    
    .bold{
       font-weight: bold;
@@ -94,7 +101,7 @@ h3{
       }
       
       span, a{
-         font-size: 16px;
+         font-size: 12px;
       }
       
       a, .website{
@@ -105,14 +112,15 @@ h3{
          color: $hover;
       }     
    }
+
    .icon-box{
       position: relative;
       color: $dark;
-      font-size: 24px;
-      height: 45px;
-      width: 45px;
-      padding: 5px;
-      top: 75px;
+      font-size: 12px;
+      height: 25px;
+      width: 25px;
+      padding: 2px;
+      top: 20px;
       left: 35%;
       display: inline-block;
       border: 2px solid $dark;
@@ -123,31 +131,129 @@ h3{
 	      -moz-transition: all ease 0.5s;
 	         transition: all ease 0.5s;
    }
+
    .icon-box:hover {
     box-shadow: inset 0 50px 0 0 $dark;
     color: $light;
    }
 }
 
-/*
-.left-box{
-   background-color: $dark;
-   width: 50px;
-   height: 350px;
-   background-size:cover;
-}
-*/
-
-/* /end */
-
-/* THE FLIP EFFECT */
-
-.flip-container, .front, .back {
-   height: 300px;
-   width: 500px;
+.flip-container, .back {
+   padding: 0px;
+   height: 180px;
+   width: 300px;
 }
 
-.front, .back {
+
+
+.back{
 	backface-visibility: hidden;
 	position: absolute;
+   top:0px;
+   left: 0px;
+}
+
+.left-square{
+   position: absolute;
+   margin: 0px;
+   padding: 0px;
+   height: 100%;
+   width: 90px;
+   background-color: $backColor;
+}
+
+.circle-frame{
+   position: absolute;
+   top:10%;
+   left:5%;
+   width:$diameter; 
+   height:$diameter;
+   border-radius: 50%;
+   background-color:$moonColor;
+   //box-shadow:10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+
+ }
+
+ 
+.circle-moon{
+   position: absolute;
+   left: 0.5 * $diameter*$crescent;
+   border-radius: 50%;
+   background-color:$backMoonColor;
+   width:$diameter*(1-$crescent); 
+   height:$diameter*(1-$crescent);
+   border-color: black;
+}
+
+
+.circle-pic{
+   position:absolute;
+   border-radius: 50%;
+   width: $diameter*(1-$crescent); 
+   height: $diameter*(1-$crescent); 
+   background-size: cover;
+}
+
+@media(min-width:400px){
+  
+   .left-square{
+      width: 30%
+   }
+
+   .back{
+
+      h1, p, .font-a-icons {
+         margin-left: 40%;
+         line-height: 90%;
+      }   
+
+      span, a, p {
+         font-size: 24px;
+      }
+
+      .icon-box{
+         font-size: 24px;
+         height: 40px;
+         width: 40px;
+         padding: 0px;
+         top: 20px;
+         left: 40%;
+         margin-right: 10px;
+      }
+
+
+      .font-a-icons{    
+         margin-top: 20px;
+         
+         .icon-group{
+            margin-top: 8px;
+         }
+         
+         span, a{
+            font-size: 14px;
+         }       
+      }
+   }
+   .flip-container,  .back  {
+      height: 240px;
+      width: 400px;
+   }
+
+   .circle-frame{
+      width:$diameter-md; 
+      height:$diameter-md;
+      left: 8%;
+   }
+
+   .circle-moon{
+      left: 0.5 * $diameter-md*$crescent;
+      width:$diameter-md*(1-$crescent); 
+      height:$diameter-md*(1-$crescent);
+   }
+
+   .circle-pic{
+      width:$diameter-md*(1-$crescent); 
+      height:$diameter-md*(1-$crescent);
+   }
+   
 }
