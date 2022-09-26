@@ -6,7 +6,8 @@ summary: "Tank drum (butaphone) is a musical instrument made out of a recycled g
 link: "https://photos.app.goo.gl/bHYzEpmcryTsGpAz7"
 picture: "./images/tankDrum.jpg"
 keywords: 
-    - "building"
+    - "music"
+    - "craft work"
 ---
 
 A simulator is available on https://www.flexyourte.com
