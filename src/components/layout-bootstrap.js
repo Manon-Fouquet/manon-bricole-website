@@ -43,11 +43,11 @@ const Layout = ({ children }) => {
             </Navbar.Collapse>
         </Navbar>
 
-        <div style={{marginTop:"75px", 
+        <div style={{
                       width:"100%", 
                       padding:"12px",
-                      marginLeft:"0px",
-                      marginRight:"0px"}}>
+                      paddingTop:"3rem",
+                      margin:"0px"}}>
             {children}
         </div> 
       </Container>  

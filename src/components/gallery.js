@@ -24,8 +24,8 @@ const Gallery = ({data}) => { return (
                 <GatsbyImage image={articlePic} />
                 
                 <Card.Body>
-                    <Card.Title  as = "h6" style={{color:"rgb(3, 68, 94)"}}>{node.frontmatter.title}</Card.Title>
-                    <Card.Text  >
+                    <Card.Title  as = "h5" style={{color:"rgb(17, 136, 183)"}}>{node.frontmatter.title}</Card.Title>
+                    <Card.Text style={{textAlign:"justify",fontStyle:"normal"}}  >
                     <Clamp withTooltip 
                     lines={5}
                     maxLines={100}

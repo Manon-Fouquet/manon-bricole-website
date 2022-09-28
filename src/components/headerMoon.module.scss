@@ -16,12 +16,12 @@ $moonColor:rgb(3, 68, 94);
     padding: 0px;
     margin: 0px;
     height:$banner_height;
-    margin-bottom:$shift+20px;
+    margin-bottom:$shift;
 }
 //box-sizing: border-box;
 
 .circle-frame{
-    position: relative;
+    position: absolute;
     padding: 0px;
     border-radius: 50%;
     background-color:$moonColor;
@@ -43,7 +43,7 @@ $moonColor:rgb(3, 68, 94);
 
 
 .circle-pic{
-    position: relative;
+    position: absolute;
     border-radius: 50%;
     top: 0.5*$borderWidth;
     left:$borderWidth;
