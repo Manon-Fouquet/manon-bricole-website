@@ -17,14 +17,13 @@ const IndexPage = () => {
         
       <HeaderMoon/>
 
-      <p className={introP}>Since 10 years, I have worked in applied mathematics and have developped
-          strong methodological and technical skills to model and optimize complex systems. 
-          On this website, you can find a collection of my  <a href = './pro/'>professional projects</a>  (and also some <a href = './perso/'>projects I do as hobbies</a>, for fun!)
+      <p className={introP}>For 10 years, I have worked in modelling and optimization of energy systems. 
+          On this website, you can find a collection of my  <a href = './pro/'>professional projects</a>  (and also some <a href = './perso/'>projects I do as hobbies</a>)
       </p> 
 
       <h2 className={subHeaders}>Services</h2>
       
-      <p style={{fontSize:"1.1rem", textAlign:"left"}}>Based on my previous experiences, I can offer you the following services</p>
+      <p style={{fontSize:"1.1rem", textAlign:"left"}}>Based on my previous experiences, I can offer you the following services as freelance</p>
       
       <Accordion defaultActiveKey="-1" style={{marginLeft:"1.5rem", marginBottom:"2rem"}}>
         <Accordion.Item eventKey="0">
@@ -56,31 +55,7 @@ const IndexPage = () => {
                 <li>Intermediate and final software releases</li>
               </ol>
             </Accordion.Body>
-          </Accordion.Item>
-
-      <Accordion.Item eventKey="2">
-        <Accordion.Header>Data analysis</Accordion.Header>
-        <Accordion.Body>
-        I can conduct investigations on your datasets using Python (Pandas, Seaborn, Plotly), following the CRISP-DM methodology (Cross-Industry Standard Process for Data Mining).
-        A report with useful visualizations will be provided.
-        </Accordion.Body>
-      </Accordion.Item>
-
-      
-      <Accordion.Item eventKey="3">
-        <Accordion.Header>Frontend development</Accordion.Header>
-        <Accordion.Body>
-          Creation of your website, front-end development 
-          <ol>
-                <li>Discussion on the site content and expected functionalities</li>
-                <li>Optional : graphical design</li>
-                <li>Optional : blueprints of the user navigation throughout the website</li>
-                <li>Implementation with a responsive design using Javascript/React/Webpack</li>
-            </ol>
-        </Accordion.Body>
-      </Accordion.Item>
-
-      
+          </Accordion.Item>      
       <Accordion.Item eventKey="4">
         <Accordion.Header>Expertise on energy markets</Accordion.Header>
         <Accordion.Body>
@@ -91,7 +66,7 @@ const IndexPage = () => {
       </Accordion.Item>
     </Accordion>
 
-    <h2 className={subHeaders}>Tecnologies</h2>
+    <h2 className={subHeaders}>Technologies</h2>
     
     <Container style={{paddingLeft:"1rem"}}>
       <Row><h4 className={technoList}>Backend</h4></Row>
