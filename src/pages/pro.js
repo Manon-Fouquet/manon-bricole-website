@@ -15,8 +15,7 @@ const Pro = ({data}) => {
      
       <h2 className={subHeaders}>A collection of work related articles</h2>
    
-      <p> Here are a few projects on which I had the opportunity to work, either as developper, project manager
-        or system expert.</p>
+      <p> Here are a few projects on which I had the opportunity to work, either as developper, consultant, or project manager.</p>
         <Gallery data={data}></Gallery>
         
       </Layout>
@@ -49,5 +48,5 @@ export const query = graphql`query ProQuery {
   }
 }
 `
-export const Head = () => <Seo title="Professional portfolio" />
+export const Head = () => <Seo title="Professional portfolio - Manon Fouquet" />
 export default Pro
