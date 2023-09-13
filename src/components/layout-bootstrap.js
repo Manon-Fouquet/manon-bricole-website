@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Container,Navbar,NavDropdown ,Nav, Row} from 'react-bootstrap'
-import CV_EN from '../data/202209_CV_FOUQUET_Manon_EN.pdf'
+import CV_EN from '../data/CV_FOUQUET_2023_EN.pdf'
 
 const Layout = ({ children }) => {
   
